@@ -3,5 +3,8 @@
     "@tailwindcss/vite": "^4.2.1",
     "react-toastify": "^11.0.5",
     "tailwindcss": "^4.2.1"
+  },
+  "devDependencies": {
+    "daisyui": "^5.5.19"
   }
 }

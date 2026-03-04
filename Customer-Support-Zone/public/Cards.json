@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "title": "Unable to login to account",
+    "description": "Customer reports that login fails with 'Invalid credentials' error even after resetting the password.",
+    "customer": "Rahim Uddin",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2026-03-01"
+  },
+  {
+    "id": 2,
+    "title": "Payment not reflecting in dashboard",
+    "description": "Customer completed payment but the transaction is not showing in their account dashboard.",
+    "customer": "Nusrat Jahan",
+    "priority": "Medium",
+    "status": "In-progress",
+    "createdAt": "2026-03-01"
+  },
+  {
+    "id": 3,
+    "title": "Error 500 on checkout page",
+    "description": "User encounters a server error when attempting to complete the checkout process.",
+    "customer": "Tanvir Hasan",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2026-03-02"
+  },
+  {
+    "id": 4,
+    "title": "Request for invoice copy",
+    "description": "Customer needs a duplicate copy of the invoice for their recent purchase.",
+    "customer": "Farzana Akter",
+    "priority": "Low",
+    "status": "In-progress",
+    "createdAt": "2026-02-28"
+  },
+  {
+    "id": 5,
+    "title": "Account suspended without notice",
+    "description": "Customer claims their account was suspended without receiving any prior notification.",
+    "customer": "Mehedi Islam",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2026-03-03"
+  },
+  {
+    "id": 6,
+    "title": "Unable to upload profile picture",
+    "description": "System shows upload success message but the profile picture does not update.",
+    "customer": "Sadia Rahman",
+    "priority": "Medium",
+    "status": "In-progress",
+    "createdAt": "2026-03-02"
+  },
+  {
+    "id": 7,
+    "title": "Subscription cancellation issue",
+    "description": "Customer tried to cancel subscription but still being charged monthly.",
+    "customer": "Arif Hossain",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2026-03-04"
+  },
+  {
+    "id": 8,
+    "title": "Feature request for dark mode",
+    "description": "Customer suggests adding a dark mode option for better night-time usability.",
+    "customer": "Mim Chowdhury",
+    "priority": "Low",
+    "status": "In-progress",
+    "createdAt": "2026-02-27"
+  },
+  {
+    "id": 9,
+    "title": "Incorrect product delivered",
+    "description": "Customer received a different product than what was ordered.",
+    "customer": "Jahid Karim",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2026-03-03"
+  },
+  {
+    "id": 10,
+    "title": "Password reset email not received",
+    "description": "Customer did not receive the password reset email after multiple attempts.",
+    "customer": "Sharmin Sultana",
+    "priority": "Medium",
+    "status": "In-progress",
+    "createdAt": "2026-03-04"
+  }
+]

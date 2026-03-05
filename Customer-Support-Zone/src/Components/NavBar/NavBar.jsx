@@ -2,10 +2,10 @@ import React from 'react';
 
 const NavBar = () => {
     return (
-        <div className=' max-w-[90%] mx-auto flex justify-between items-center'>
-            <div className="navbar bg-base-100 shadow-sm">
+        <div className=' max-w-[1200px] mx-auto flex justify-between items-center'>
+            <div className="navbar bg-base-100">
                 <div className="navbar-start">
-                    <a className="text-xl">CS — Ticket System</a>
+                    <a className="text-xl" href=''>CS — Ticket System</a>
                 </div>
                 <div className="navbar-end">
                     <div className="dropdown">
@@ -33,7 +33,7 @@ const NavBar = () => {
                             <a href=""> Download </a>
                             <a href=""> Contact </a>
                         </div>
-                        <a className="btn ml-[40px] bg-[#422AD5] text-white"> + New Ticket</a>
+                        <a className="btn ml-[40px] bg-[#422AD5]  bg-gradient-to-r from-blue-500 to-cyan-400 text-white"> + New Ticket</a>
                     </div>
                 </div>
             </div>

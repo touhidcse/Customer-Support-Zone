@@ -6,8 +6,7 @@ const Cards = ({card}) => {
    
     return (
         <div>
-            <div>
-                <div class="card w-96 bg-base-100 card-xg shadow-sm">
+                <div class="card w-96 bg-base-100 card-sm shadow-sm">
                     <div class="card-body">
                         <div className='flex justify-between items-center'>
                             <h2 class="card-title">{card.title}</h2>
@@ -26,7 +25,6 @@ const Cards = ({card}) => {
                         </div>
                     </div>
                 </div>
-            </div>
         </div>
     );
 };

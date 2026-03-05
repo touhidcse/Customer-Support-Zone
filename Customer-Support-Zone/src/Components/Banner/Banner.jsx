@@ -1,7 +1,7 @@
 import React from 'react';
-const Banner = () => {
+const Banner = ({ inProgress,resolved}) => {
     return (
-        <div className='max-w-[100%] bg-[#F5F5F5]'>
+        <div className='max-w-[100%] bg-[#F5F5F5] pb-20'>
             <div className='max-w-[1200px] mx-auto'>
                 <div className='flex gap-10'>
                     <div
@@ -15,7 +15,7 @@ const Banner = () => {
                         <div className="hero-content text-neutral-content text-center">
                             <div className="">
                                 <h1 className="text-2xl font-bold">In-Progress</h1>
-                                <h1 className="text-2xl font-bold">{0}</h1>
+                                <h1 className="text-2xl font-bold">{inProgress}</h1>
 
                             </div>
                         </div>
@@ -31,7 +31,7 @@ const Banner = () => {
                         <div className="hero-content text-neutral-content text-center">
                             <div className="">
                                 <h1 className="text-2xl font-bold">Resolved</h1>
-                                <h1 className="text-2xl font-bold">{0}</h1>
+                                <h1 className="text-2xl font-bold">{resolved}</h1>
 
                             </div>
                         </div>

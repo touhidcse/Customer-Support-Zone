@@ -6,7 +6,8 @@ import Banner from './Components/Banner/Banner';
 import Body from './Components/Body/Body';
 // import Cards from './Components/Cards/Cards';
 import AvailableCards from './Components/AvailableCards/AvailableCards';
-import { Suspense } from 'react';
+import { Suspense, useState } from 'react';
+
 
 const fetchCards = async () => {
   const res = await fetch("/Card.json")
@@ -16,18 +17,19 @@ const cardPromise = fetchCards()
 // console.log(cardPromise)
 function App() {
   // const [count, setCount] = useState(0)
+  const [inProgress, setinProgress]=useState(0);
+  const [resolved, setresolved] =useState(0)
 
   return (
     <>
       <NavBar></NavBar>
-      <Banner></Banner>
+    <Banner inProgress={inProgress} resolved={resolved}></Banner>
       <Body></Body>
-      {/* <Cards></Cards> */}
       <div>
 
       </div>
       <Suspense fallback={<span className="loading loading-spinner text-error"></span>}>
-        <AvailableCards cardPromise={cardPromise}></AvailableCards>
+      <AvailableCards cardPromise={cardPromise} inProgress={inProgress} setinProgress={setinProgress} resolved={resolved} setresolved={setresolved}></AvailableCards>
       </Suspense>
 
     </>

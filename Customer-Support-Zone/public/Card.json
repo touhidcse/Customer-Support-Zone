@@ -10,7 +10,7 @@
   },
   {
     "id": 2,
-    "title": "Payment not reflecting in dashboard",
+    "title": "Payment not reflecting",
     "description": "Customer completed payment but the transaction is not showing in their account dashboard.",
     "customer": "Nusrat Jahan",
     "priority": "Medium",

@@ -22,18 +22,6 @@ function App() {
   const [resolved, setresolved] = useState(0)
   const [selectedCard, setSelectedCard] = useState([]);
   const [task,setTask] = useState([])
-// Remove card from layon
- const removeCard=(card)=>{
-    const filtereCard = selectedCard.filter(c=>c.id!==card.id);
-    // console.log(filtereCard)
-    setSelectedCard(filtereCard)
-  }
-  // const removePlayer=(p)=>{
-  //   const filteredData = purchasedPlayers.filter(ply=>ply["player-name"]!=p["player-name"]);
-  //   console.log(filteredData)
-  //   setpurchasedPlayers(filteredData)
-  //   setAvailableBalance(availableBanlance+parseInt(p.price))
-  // }
 
   return (
     <>
@@ -48,7 +36,7 @@ function App() {
         <AvailableCards 
         cardPromise={cardPromise} inProgress={inProgress} setinProgress={setinProgress} resolved={resolved}
          setresolved={setresolved} selectedCard={selectedCard} 
-         setSelectedCard={setSelectedCard} removeCard={removeCard} task={task} setTask={setTask}>
+         setSelectedCard={setSelectedCard} task={task} setTask={setTask}>
 
         </AvailableCards>
       </Suspense>

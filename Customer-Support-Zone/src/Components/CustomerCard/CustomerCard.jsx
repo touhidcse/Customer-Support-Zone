@@ -4,22 +4,39 @@ import { useState } from 'react';
 import dateImg from '../../assets/date.png'
 import iconImg from '../../assets/Ellipse 22.png'
 import { toast } from 'react-toastify';
-const CustomerCard = ({card,resolved, setresolved,inProgress, setinProgress, selectedCard,setSelectedCard}) => {
+import SelectedCard from '../SelectedCard/SelectedCard';
+const CustomerCard = ({ card, removeCard, resolved, setresolved, inProgress, setinProgress, selectedCard, setSelectedCard }) => {
     const [isSelected, setisSelected] = useState(false);
 
+    const [clicked, setClicked] = useState(false);
+
     const handdleSelected = (cardData) => {
-            setinProgress(inProgress+1)
-            // toast('one card selected')
-            setSelectedCard([...selectedCard,cardData])
-            // console.log(selectedCard)
-            
-        
+        setinProgress(inProgress + 1)
+        // toast('one card selected')
+        setSelectedCard([...selectedCard, cardData])
+        // console.log(selectedCard)
+
     }
-    // const handleRemoveCardFromLayout=()=>{
-    //     remove(card)
+    const handleClick = () => {
+        if (clicked) return; // prevent second click
+
+        handdleSelected(card);
+        setClicked(true);
+    };
+    // const handleRemoveCardFromLayout = () => {
+    //     // toast('one card selected')
+    //     // setTask([...task, cardData])
+    //     //selectedCard([...selectedCard,cardData])
+    //     // console.log(selectedCard)
+    //     removeCard(card)
     // }
-       return (
-        <div onClick={() => { handdleSelected(card) }} className="card w-96 bg-base-100 card-sm shadow-sm cursor-pointer" >
+
+
+
+    return (
+        <div onClick={handleClick}
+            className={`card w-96 bg-base-100 card-sm shadow-sm cursor-pointer ${clicked ? "opacity-50 cursor-not-allowed" : ""
+                }`} >
             <div class="card-body" >
                 <div className='flex justify-between items-center'>
                     <h2 class="card-title">{card.title}</h2>
@@ -38,6 +55,7 @@ const CustomerCard = ({card,resolved, setresolved,inProgress, setinProgress, sel
                 </div>
             </div>
         </div>
+
     );
 };
 

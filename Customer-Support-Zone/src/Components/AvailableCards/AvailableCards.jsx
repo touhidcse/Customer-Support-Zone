@@ -2,12 +2,17 @@ import React, { use } from 'react';
 import CustomerCard from '../CustomerCard/CustomerCard';
 import SelectedCard from '../SelectedCard/SelectedCard';
 
-const AvailableCards = ({ cardPromise, removeCard, inProgress, setinProgress, resolved, setresolved, selectedCard, setSelectedCard ,task,setTask}) => {
+const AvailableCards = ({ cardPromise, inProgress, setinProgress, resolved, setresolved, selectedCard, setSelectedCard, task, setTask }) => {
     const cardData = use(cardPromise)
 
     // console.log(cardData)
 
-
+    // Remove card from layon
+    const removeCard = (card) => {
+        const filtereCard = selectedCard.filter(c => c.id !== card.id);
+        // console.log(filtereCard)
+        setSelectedCard(filtereCard)
+    }
     return (
         //     {
         //         document.getElementById("card-Container").addEventListener('click', handleSelected)
@@ -30,14 +35,14 @@ const AvailableCards = ({ cardPromise, removeCard, inProgress, setinProgress, re
                 <div id='card-Container' className='grid gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-2'>
                     {
 
-                        cardData.map(card => <CustomerCard card={card} inProgress={inProgress} setinProgress={setinProgress} resolved={resolved} setresolved={setresolved} selectedCard={selectedCard} setSelectedCard={setSelectedCard}></CustomerCard>)
+                        cardData.map(card => <CustomerCard card={card} removeCard={removeCard} inProgress={inProgress} setinProgress={setinProgress} resolved={resolved} setresolved={setresolved} selectedCard={selectedCard} setSelectedCard={setSelectedCard} removeCard={removeCard}></CustomerCard>)
 
                     }
                 </div>
                 <div className=''>
                     {/* Dynamically load  */}
                     {
-                        selectedCard.map(card => <SelectedCard card={card} inProgress={inProgress} setinProgress={setinProgress} resolved={resolved} setresolved={setresolved} selectedCard={selectedCard} setSelectedCard={setSelectedCard} task={task} setTask={setTask} removeCard={removeCard}></SelectedCard>)
+                        selectedCard.map(card => <SelectedCard card={card} removeCard={removeCard} inProgress={inProgress} setinProgress={setinProgress} resolved={resolved} setresolved={setresolved} selectedCard={selectedCard} setSelectedCard={setSelectedCard} task={task} setTask={setTask} removeCard={removeCard}></SelectedCard>)
                     }
 
                 </div>

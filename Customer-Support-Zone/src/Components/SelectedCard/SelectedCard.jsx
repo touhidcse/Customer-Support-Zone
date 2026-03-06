@@ -1,23 +1,13 @@
 import React from 'react';
 
-const SelectedCard = ({ card,inProgress,handleRemoveCardFromLayout, setinProgress, resolved, setresolved, selectedCard, setSelectedCard,removeCard, task, setTask }) => {
-    // console.log(card)
-
-    // const handleRemove=()=>{
-    //     removePlayer(card)
-    // }
-
+const SelectedCard = ({ card,inProgress, setinProgress, resolved, setresolved, selectedCard, setSelectedCard,removeCard, task, setTask }) => {
+   
     const handleRemoveCardFromTask = () => {
-        setinProgress(inProgress - 1)
-        setresolved(resolved + 1)
-        // toast('one card selected')
-        // setTask([...task, cardData])
-        //selectedCard([...selectedCard,cardData])
-        // console.log(selectedCard)
-        removeCard(card)
-        // handleRemoveCardFromLayout(card)
-    }
-    // console.log(selectedCard)
+    setinProgress(inProgress - 1)
+    setresolved(resolved + 1)
+
+    removeCard(card)
+}
 
     return (
 

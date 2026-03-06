@@ -10,6 +10,8 @@ const CustomerCard = ({ card, removeCard, resolved, setresolved, inProgress, set
 
     const [clicked, setClicked] = useState(false);
 
+
+
     const handdleSelected = (cardData) => {
         setinProgress(inProgress + 1)
         // toast('one card selected')
@@ -23,19 +25,12 @@ const CustomerCard = ({ card, removeCard, resolved, setresolved, inProgress, set
         handdleSelected(card);
         setClicked(true);
     };
-    // const handleRemoveCardFromLayout = () => {
-    //     // toast('one card selected')
-    //     // setTask([...task, cardData])
-    //     //selectedCard([...selectedCard,cardData])
-    //     // console.log(selectedCard)
-    //     removeCard(card)
-    // }
 
 
 
     return (
         <div onClick={handleClick}
-            className={`card w-96 bg-base-100 card-sm shadow-sm cursor-pointer ${clicked ? "opacity-50 cursor-not-allowed" : ""
+            className={`card w-96 bg-base-100 card-sm shadow-sm  ${clicked ? "opacity-60 cursor-not-allowed" : "cursor-pointer"
                 }`} >
             <div class="card-body" >
                 <div className='flex justify-between items-center'>

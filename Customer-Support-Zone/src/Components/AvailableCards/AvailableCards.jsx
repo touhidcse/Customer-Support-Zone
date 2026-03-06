@@ -1,30 +1,17 @@
 import React, { use } from 'react';
 import CustomerCard from '../CustomerCard/CustomerCard';
 import SelectedCard from '../SelectedCard/SelectedCard';
-
-const AvailableCards = ({ cardPromise, inProgress, setinProgress, resolved, setresolved, selectedCard, setSelectedCard, task, setTask }) => {
+import { useEffect } from "react";
+const AvailableCards = ({ cardPromise, removeCard, cards, setCards, inProgress, setinProgress, resolved, setresolved, selectedCard, setSelectedCard, task, setTask }) => {
     const cardData = use(cardPromise)
 
-    // console.log(cardData)
+    useEffect(() => {
+        setCards(cardData)
+    }, [cardData])
 
-    // Remove card from layon
-    const removeCard = (card) => {
-        const filtereCard = selectedCard.filter(c => c.id !== card.id);
-        // console.log(filtereCard)
-        setSelectedCard(filtereCard)
-    }
+
     return (
-        //     {
-        //         document.getElementById("card-Container").addEventListener('click', handleSelected)
-        //     }
-        //     const selectedCard = []
-        // const handleSelected = (cardData) => {
-        //     // isSelected(true)
-        //     // setisCardSelected([...isCardSelected, cardData])
-        //     const allSelectedCard = [...selectedCard, cardData]
-        //     return allSelectedCard;
 
-        // }
         <div className='max-w-[100%] mx-auto  bg-[#F5F5F5]'>
             <div className='max-w-[1200px] mx-auto flex justify-between pb-5'>
                 <h1 className='max-w-400px text-2xl font-bold'>Customer Tickets</h1>
@@ -35,14 +22,14 @@ const AvailableCards = ({ cardPromise, inProgress, setinProgress, resolved, setr
                 <div id='card-Container' className='grid gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-2'>
                     {
 
-                        cardData.map(card => <CustomerCard card={card} removeCard={removeCard} inProgress={inProgress} setinProgress={setinProgress} resolved={resolved} setresolved={setresolved} selectedCard={selectedCard} setSelectedCard={setSelectedCard} removeCard={removeCard}></CustomerCard>)
+                        cards.map(card => <CustomerCard key={card.id} card={card} removeCard={removeCard} cards={cards} setCards={setCards} inProgress={inProgress} setinProgress={setinProgress} resolved={resolved} setresolved={setresolved} selectedCard={selectedCard} setSelectedCard={setSelectedCard} removeCard={removeCard}></CustomerCard>)
 
                     }
                 </div>
                 <div className=''>
                     {/* Dynamically load  */}
                     {
-                        selectedCard.map(card => <SelectedCard card={card} removeCard={removeCard} inProgress={inProgress} setinProgress={setinProgress} resolved={resolved} setresolved={setresolved} selectedCard={selectedCard} setSelectedCard={setSelectedCard} task={task} setTask={setTask} removeCard={removeCard}></SelectedCard>)
+                        selectedCard.map(card => <SelectedCard card={card} removeCard={removeCard} cards={cards} setCards={setCards} inProgress={inProgress} setinProgress={setinProgress} resolved={resolved} setresolved={setresolved} selectedCard={selectedCard} setSelectedCard={setSelectedCard} task={task} setTask={setTask} removeCard={removeCard}></SelectedCard>)
                     }
 
                 </div>

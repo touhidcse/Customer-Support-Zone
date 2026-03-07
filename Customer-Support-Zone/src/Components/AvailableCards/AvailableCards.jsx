@@ -22,7 +22,7 @@ const AvailableCards = ({ cardPromise, removeCard, cards, setCards, inProgress, 
                 <div id='card-Container' className='grid gap-5 grid-cols-1 md:grid-cols-1 lg:grid-cols-2 py-5'>
                     {
 
-                        cards.map(card => <CustomerCard key={card.id} card={card} removeCard={removeCard} cards={cards} setCards={setCards} inProgress={inProgress} setinProgress={setinProgress} resolved={resolved} setresolved={setresolved} selectedCard={selectedCard} setSelectedCard={setSelectedCard} removeCard={removeCard}></CustomerCard>)
+                        cards.map(card => <CustomerCard key={card.id} card={card} removeCard={removeCard} cards={cards} setCards={setCards} inProgress={inProgress} setinProgress={setinProgress} resolved={resolved} setresolved={setresolved} selectedCard={selectedCard} setSelectedCard={setSelectedCard}></CustomerCard>)
 
                     }
                 </div>
@@ -30,7 +30,7 @@ const AvailableCards = ({ cardPromise, removeCard, cards, setCards, inProgress, 
                     {/* Dynamically load  */}
                     <h2 className='max-w-400px mx-auto text-2xl font-bold text-center'>Task Status</h2>
                     {
-                        selectedCard.map(card => <SelectedCard card={card} removeCard={removeCard} cards={cards} setCards={setCards} inProgress={inProgress} setinProgress={setinProgress} resolved={resolved} setresolved={setresolved} selectedCard={selectedCard} setSelectedCard={setSelectedCard} task={task} setTask={setTask} removeCard={removeCard}></SelectedCard>)
+                        selectedCard.map(card => <SelectedCard card={card} removeCard={removeCard} cards={cards} setCards={setCards} inProgress={inProgress} setinProgress={setinProgress} resolved={resolved} setresolved={setresolved} selectedCard={selectedCard} setSelectedCard={setSelectedCard} task={task} setTask={setTask}></SelectedCard>)
                     }
 
                 </div>

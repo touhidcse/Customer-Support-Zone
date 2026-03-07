@@ -18,8 +18,8 @@ const AvailableCards = ({ cardPromise, removeCard, cards, setCards, inProgress, 
                 <h1 className='max-w-400px mx-auto'></h1>
                 
             </div>
-            <div className='max-w-[1200px] mx-auto grid grid-cols-2 md:grid-cols-2 lg:flex gap-10 justify-between'>
-                <div id='card-Container' className='grid gap-5 grid-cols-1 md:grid-cols-1 lg:grid-cols-2'>
+            <div className='max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:flex gap-10 justify-between'>
+                <div id='card-Container' className='grid gap-5 grid-cols-1 md:grid-cols-1 lg:grid-cols-2 py-5'>
                     {
 
                         cards.map(card => <CustomerCard key={card.id} card={card} removeCard={removeCard} cards={cards} setCards={setCards} inProgress={inProgress} setinProgress={setinProgress} resolved={resolved} setresolved={setresolved} selectedCard={selectedCard} setSelectedCard={setSelectedCard} removeCard={removeCard}></CustomerCard>)

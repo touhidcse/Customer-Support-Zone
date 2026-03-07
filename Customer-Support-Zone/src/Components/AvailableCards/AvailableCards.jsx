@@ -16,10 +16,10 @@ const AvailableCards = ({ cardPromise, removeCard, cards, setCards, inProgress, 
             <div className='max-w-[1200px] mx-auto flex justify-between pb-5'>
                 <h1 className='max-w-400px text-2xl font-bold'>Customer Tickets</h1>
                 <h1 className='max-w-400px mx-auto'></h1>
-                <h2 className='max-w-400px mx-auto text-2xl font-bold'>Task Status</h2>
+                
             </div>
-            <div className='max-w-[1200px] mx-auto flex gap-10 justify-between'>
-                <div id='card-Container' className='grid gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-2'>
+            <div className='max-w-[1200px] mx-auto grid grid-cols-2 md:grid-cols-2 lg:flex gap-10 justify-between'>
+                <div id='card-Container' className='grid gap-5 grid-cols-1 md:grid-cols-1 lg:grid-cols-2'>
                     {
 
                         cards.map(card => <CustomerCard key={card.id} card={card} removeCard={removeCard} cards={cards} setCards={setCards} inProgress={inProgress} setinProgress={setinProgress} resolved={resolved} setresolved={setresolved} selectedCard={selectedCard} setSelectedCard={setSelectedCard} removeCard={removeCard}></CustomerCard>)
@@ -28,6 +28,7 @@ const AvailableCards = ({ cardPromise, removeCard, cards, setCards, inProgress, 
                 </div>
                 <div className=''>
                     {/* Dynamically load  */}
+                    <h2 className='max-w-400px mx-auto text-2xl font-bold text-center'>Task Status</h2>
                     {
                         selectedCard.map(card => <SelectedCard card={card} removeCard={removeCard} cards={cards} setCards={setCards} inProgress={inProgress} setinProgress={setinProgress} resolved={resolved} setresolved={setresolved} selectedCard={selectedCard} setSelectedCard={setSelectedCard} task={task} setTask={setTask} removeCard={removeCard}></SelectedCard>)
                     }

@@ -6,9 +6,9 @@ import Banner from './Components/Banner/Banner';
 import AvailableCards from './Components/AvailableCards/AvailableCards';
 
 import CustomerCard from './Components/CustomerCard/CustomerCard';
-import SelectCustomer from './Components/SelectCustomer/SelectCustomer';
 import { Suspense, useState } from 'react';
 import SelectedCard from './Components/SelectedCard/SelectedCard';
+import Footer from './Components/Footer/Footer';
 
 
 const fetchCards = async () => {
@@ -58,6 +58,7 @@ function App() {
 
         </AvailableCards>
       </Suspense>
+      <Footer></Footer>
     </>
   )
 }

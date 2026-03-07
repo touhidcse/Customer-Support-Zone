@@ -1,14 +1,16 @@
 import React from 'react';
-const Banner = ({ inProgress,resolved}) => {
+const Banner = ({ inProgress, resolved }) => {
     return (
         <div className='max-w-[100%] bg-[#F5F5F5] pb-20'>
             <div className='max-w-[1200px] mx-auto'>
                 <div className='flex gap-10'>
                     <div
-                        className="hero max-w-[600px] min-h-[250px] bg-[#422AD5]"
+                        className="hero max-w-[600px] min-h-[250px] rounded-xl"
                         style={{
-                            backgroundImage:
-                                "url(https://i.ibb.co.com/tMsK4PMS/vector1.png)",
+                            backgroundImage: `linear-gradient(135deg, rgba(66,42,213,0.9), rgba(139,92,246,0.1)),
+                            url(https://i.ibb.co.com/tMsK4PMS/vector1.png)`,
+                            backgroundSize: "cover",
+                            backgroundPosition: "center",
                         }}
                     >
                         <div className="hero-overlay"></div>
@@ -21,10 +23,12 @@ const Banner = ({ inProgress,resolved}) => {
                         </div>
                     </div>
                     <div
-                        className="hero max-w-[600px] min-h-[250px] bg-[#41BE6c] "
+                        className="hero max-w-[600px] min-h-[250px]"
                         style={{
-                            backgroundImage:
-                                "url(https://i.ibb.co.com/tMsK4PMS/vector1.png)",
+                            backgroundImage: `linear-gradient(135deg, rgba(65,190,108,0.9), rgba(34,197,94,0.1)),
+                            url(https://i.ibb.co.com/tMsK4PMS/vector1.png)`,
+                            backgroundSize: "cover",
+                            backgroundPosition: "center",
                         }}
                     >
                         <div className="hero-overlay"></div>

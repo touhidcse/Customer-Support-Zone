@@ -22,9 +22,8 @@ function App() {
   const [inProgress, setinProgress] = useState(0);
   const [resolved, setresolved] = useState(0)
   const [selectedCard, setSelectedCard] = useState([]);
-  const [task, setTask] = useState([])
   const [cards, setCards] = useState([]);
-
+  const [resolvedTask, setresolvedTask]=useState([])
 
   const removeCard = (cardToRemove) => {
 
@@ -39,6 +38,9 @@ function App() {
       card => card.id !== cardToRemove.id
     );
     setCards(updatedCards);
+
+    // add card to resolved task
+    setresolvedTask([...resolvedTask, cardToRemove]);
   };
 
 
@@ -53,9 +55,10 @@ function App() {
 
       <Suspense fallback={<span className="loading loading-spinner text-error"></span>}>
         <AvailableCards
-          cardPromise={cardPromise} inProgress={inProgress} setinProgress={setinProgress} resolved={resolved}
+          cardPromise={cardPromise}  inProgress={inProgress} setinProgress={setinProgress} resolved={resolved}
           setresolved={setresolved} selectedCard={selectedCard}
-          setSelectedCard={setSelectedCard} task={task} setTask={setTask} removeCard={removeCard} cards={cards} setCards={setCards}>
+          setSelectedCard={setSelectedCard} removeCard={removeCard} cards={cards}
+           setCards={setCards} resolvedTask={resolvedTask} setresolvedTask={setresolvedTask}>
 
         </AvailableCards>
       </Suspense>

@@ -17,6 +17,7 @@ const CustomerCard = ({ card, removeCard, resolved, setresolved, inProgress, set
         // toast('one card selected')
         setSelectedCard([...selectedCard, cardData])
         // console.log(selectedCard)
+        toast('one card selected')
 
     }
     const handleClick = () => {
@@ -26,7 +27,7 @@ const CustomerCard = ({ card, removeCard, resolved, setresolved, inProgress, set
         setClicked(true);
     };
 
-
+    
 
     return (
         <div onClick={handleClick}

@@ -7,6 +7,7 @@ import AvailableCards from './Components/AvailableCards/AvailableCards';
 
 import CustomerCard from './Components/CustomerCard/CustomerCard';
 import { Suspense, useState } from 'react';
+ import { ToastContainer} from 'react-toastify';
 import SelectedCard from './Components/SelectedCard/SelectedCard';
 import Footer from './Components/Footer/Footer';
 
@@ -59,6 +60,7 @@ function App() {
         </AvailableCards>
       </Suspense>
       <Footer></Footer>
+    <ToastContainer />
     </>
   )
 }

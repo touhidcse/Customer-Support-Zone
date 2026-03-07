@@ -1,12 +1,13 @@
 import React from 'react';
+import { toast } from 'react-toastify';
 
 const SelectedCard = ({ card,inProgress, setinProgress, resolved, setresolved, selectedCard, setSelectedCard,removeCard, task, setTask }) => {
    
     const handleRemoveCardFromTask = () => {
     setinProgress(inProgress - 1)
     setresolved(resolved + 1)
-
     removeCard(card)
+    toast("One task completed and card removed from layout")
 }
 
     return (
